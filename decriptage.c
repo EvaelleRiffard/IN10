@@ -1,0 +1,1 @@
+// permet de savoir si le mot choisi est le bon mot et renvoie si il y a les mêmes lettres et s'ils sont à la bonne place
