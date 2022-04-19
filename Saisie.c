@@ -18,19 +18,23 @@ char* saisie(){
     f=fopen("dico.txt","rt");
     if (f==NULL){
         printf("Fichier corrompu");
+        fclose(f);
         return erreur;
     }
-    int n=5070;
+    int n=1140;
     char * buffer=(char *) malloc(6);
     int i=1;
     while ((strcmp(fgets(buffer,6,f),mot)!=0)&&i<=n){
         i=i+1;
+        printf("%s", buffer);
     }
     if (i==5071){
         printf("Le mot n'existe pas");
+        fclose(f);
         return erreur;
     }
     else{
+        fclose(f);
         return mot;
     }
 }
