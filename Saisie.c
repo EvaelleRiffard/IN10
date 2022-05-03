@@ -26,7 +26,7 @@ char* saisie(){
     int i=1;
     while ((strcmp(fgets(buffer,6,f),mot)!=0)&&i<=n){
         i=i+1;
-        printf("%s", buffer);
+        //printf("%s", buffer);
     }
     if (i==5071){
         printf("Le mot n'existe pas");

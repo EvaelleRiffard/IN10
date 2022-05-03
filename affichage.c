@@ -1,1 +1,0 @@
-// Affiche le mot dans la bonne couleur

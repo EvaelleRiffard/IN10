@@ -5,7 +5,8 @@
 #include "Saisie.h"
 
 #define VERT "\x1B[32m"
-#define JAUNE "\x1B[33m"
+#define BLEU "\x1B[36m"
+//#define JAUNE "\x1B[33m"
 #define ROUGE "\x1B[31m"
 #define RESET "\x1B[0m"
 
@@ -14,7 +15,9 @@ struct lettre {
     char* c; //couleur
 };
 
-struct lettre* decriptage(char* essai, char* mot){
+void decriptage(char* essai, char* mot){
+
+    struct lettre* L = malloc(5 * sizeof(struct lettre));
 
     //traiter le cas d'erreur
     while (strcmp(essai, "erreur") == 0){
@@ -22,7 +25,7 @@ struct lettre* decriptage(char* essai, char* mot){
         essai = saisie();
     }
 
-    struct lettre* L = malloc(5 * sizeof(struct lettre));
+    //struct lettre* L = malloc(5 * sizeof(struct lettre));
     for (int i=0; i<5; i++){
         L[i].l = essai[i];
         printf("%c", L[i].l);
@@ -40,7 +43,7 @@ struct lettre* decriptage(char* essai, char* mot){
             }
             //oui il y est
             if (k<5){
-                L[i].c = JAUNE;
+                L[i].c = BLEU;
             }
             //non il n'y est pas
             else{
@@ -49,5 +52,9 @@ struct lettre* decriptage(char* essai, char* mot){
         }
     }
     printf("\n");
-    return L;
+
+    for (int i = 0; i<5; i++){
+        printf("%s%c%s\n", L[i].c, L[i].l, RESET );
+    
+    free(L);
 }
