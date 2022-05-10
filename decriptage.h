@@ -1,6 +1,3 @@
-struct lettre {
-    char l ; //lettre
-    char* c; //couleur
-};
+struct lettre;
 
-struct lettre* decriptage(char* essai, char* mot);
+int* decriptage(char* essai, char* mot);

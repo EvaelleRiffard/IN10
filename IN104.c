@@ -3,6 +3,8 @@
 #include <string.h>
 #include "Saisie.h"
 #include "decriptage.h"
+#include "reglejeu.h"
+#include "wordle.h"
 
 
 int main(){
@@ -21,8 +23,6 @@ int main(){
     printf("%s%s%s\n", VERT, v, RESET);
     */
 
+    wordle("votif");
     
-    decriptage(saisie(), "votif");
-    
-   
 }

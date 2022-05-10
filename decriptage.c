@@ -15,9 +15,10 @@ struct lettre {
     char* c; //couleur
 };
 
-void decriptage(char* essai, char* mot){
+int* decriptage(char* essai, char* mot){
 
     struct lettre* L = malloc(5 * sizeof(struct lettre));
+    int* COULEURS = malloc(5 * sizeof(int));
 
     //traiter le cas d'erreur
     while (strcmp(essai, "erreur") == 0){
@@ -33,6 +34,7 @@ void decriptage(char* essai, char* mot){
         //est ce que la lettre est à la bonne place
         if(essai[i] == mot[i]){
             L[i].c = VERT;
+            COULEURS[i] = 0;
         }
 
         //est ce que la lettre est dans le mot
@@ -44,10 +46,12 @@ void decriptage(char* essai, char* mot){
             //oui il y est
             if (k<5){
                 L[i].c = BLEU;
+                COULEURS[i] = 1;
             }
             //non il n'y est pas
             else{
                 L[i].c = ROUGE;
+                COULEURS[i] = 2;
             }
         }
     }
@@ -55,6 +59,10 @@ void decriptage(char* essai, char* mot){
 
     for (int i = 0; i<5; i++){
         printf("%s%c%s\n", L[i].c, L[i].l, RESET );
+    }
+
     
     free(L);
+    return COULEURS;
+
 }
