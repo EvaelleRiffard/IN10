@@ -5,6 +5,7 @@
 #include "Saisie.h"
 #include "decriptage.h"
 #include "reglejeu.h"
+#include "hasard.h"
 
 void wordle(char* mot){
 
