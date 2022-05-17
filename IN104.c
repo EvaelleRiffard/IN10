@@ -5,6 +5,7 @@
 #include "decriptage.h"
 #include "reglejeu.h"
 #include "wordle.h"
+#include "hasard.h"
 
 
 int main(){
@@ -23,6 +24,7 @@ int main(){
     printf("%s%s%s\n", VERT, v, RESET);
     */
 
-    wordle("votif");
-    
+    // wordle("votif");
+    char* mot = hasard();
+    printf("%s\n", mot);
 }
