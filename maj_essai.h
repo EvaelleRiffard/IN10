@@ -1,0 +1,1 @@
+char* maj_essai(char* essai, char**Dico);

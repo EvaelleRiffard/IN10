@@ -1,0 +1,1 @@
+char* robot(char* mot);
