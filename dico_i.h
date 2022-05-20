@@ -1,0 +1,1 @@
+char** dico_i();

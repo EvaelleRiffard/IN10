@@ -35,8 +35,8 @@ char* hasard(){
         fgets(buffer,6,f);
     }
     char * mot=fgets(buffer,6,f);
-    printf("%d\n", r);
-    printf("%s\n", mot);
+    //printf("%d\n", r);
+    //printf("%s\n", mot);
 
     fclose(f);
     return mot;

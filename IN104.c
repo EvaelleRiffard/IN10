@@ -6,7 +6,7 @@
 #include "reglejeu.h"
 #include "wordle.h"
 #include "hasard.h"
-
+#include "robot.h"
 
 int main(){
     
@@ -24,7 +24,20 @@ int main(){
     printf("%s%s%s\n", VERT, v, RESET);
     */
 
-    // wordle("votif");
+    /*
     char* mot = hasard();
+    //printf("%s\n", mot);
+    wordle(mot);
+    // wordle(hasard());
+    */
+    
+    char* mot = hasard();
+    printf("le mot à trouver est : ");
     printf("%s\n", mot);
+    char* res = robot(mot);
+    printf("le mot donné par le robot est : ");
+    printf("%s\n", res);
+
+
+    
 }
