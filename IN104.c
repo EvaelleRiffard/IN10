@@ -7,6 +7,7 @@
 #include "wordle.h"
 #include "hasard.h"
 #include "robot.h"
+#include "maj_dico.h"
 
 int main(){
     

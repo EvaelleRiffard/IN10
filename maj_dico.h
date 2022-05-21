@@ -1,1 +1,1 @@
-char* maj_dico(char* mot, int* COULEURS_M, char** Dico);
+char** maj_dico(char* mot, int* COULEURS_M, char** Dico);
