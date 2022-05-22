@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "decriptage.h"
+#include "comp.h"
 #define MAX 10140
 
 char** maj_dico(char* essai, int* COULEURS_M, char** Dico){
@@ -12,8 +13,8 @@ char** maj_dico(char* essai, int* COULEURS_M, char** Dico){
    // char* DicoNew[10140]; //Le dico qui va être mis à jour avec seulement les mots correspondants au bon truc
     char ** DicoNew=malloc(sizeof(char *)*10140);
     while (k<MAX-1){
-       int* COULEURS = decriptage(mot, Dico[k]);   //On recuperer le code couleur de tous les mots du dico et on garde ceux qui ont celui qui correspond à notre mot
-        if (COULEURS_M == COULEURS){
+       int* COULEURS = decriptage(essai, Dico[k]);   //On recuperer le code couleur de tous les mots du dico et on garde ceux qui ont celui qui correspond à notre mot
+        if (comp(COULEURS_M, 5, COULEURS, 5) == 0){
             DicoNew[j]=Dico[k]; //maj du dico
             j=j+1;
         }

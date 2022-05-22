@@ -1,0 +1,1 @@
+int comp(int* A, int a, int* B, int b);
