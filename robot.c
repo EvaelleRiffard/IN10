@@ -8,8 +8,6 @@
 #include "decriptage.h"
 
 
- 
-
 char* robot(char* mot){
     char** Dico = dico_i();
     char* essai = "tarie";
@@ -22,9 +20,9 @@ char* robot(char* mot){
         printf("%s\n", essai);
         COULEURS_M = decriptage(essai, mot);
         C = 0;
-        for (int j = 0; j<5; ++j){ C += COULEURS_M[i];}
+        for (int j = 0; j<5; j++){ C += COULEURS_M[j];}
         i = i+1;}
-    while (i<1000 && C != 0); 
+    while (C != 0 && i<10); 
 
     return essai; 
 }
