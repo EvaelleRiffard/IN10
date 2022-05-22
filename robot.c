@@ -22,7 +22,7 @@ char* robot(char* mot){
         printf("%s\n", essai);
         COULEURS_M = decriptage(essai, mot);
         C = 0;
-        for (int i = 0; i<5; ++i){ C += COULEURS_M[i];}
+        for (int j = 0; j<5; ++j){ C += COULEURS_M[i];}
         i = i+1;}
     while (i<1000 && C != 0); 
 

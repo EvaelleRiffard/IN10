@@ -32,12 +32,22 @@ int main(){
     // wordle(hasard());
     */
     
+    /*
     char* mot = hasard();
     printf("le mot à trouver est : ");
     printf("%s\n", mot);
     char* res = robot(mot);
     printf("le mot donné par le robot est : ");
     printf("%s\n", res);
+    */
+    int* A = [0,1,4,9];
+    int* C = [0,1,4,7];
+    for (i =0; i<4; i++){
+        C[3] += 1;
+        if (C == A){
+        printf("oui ca marche");
+        }
+    } 
 
 
     

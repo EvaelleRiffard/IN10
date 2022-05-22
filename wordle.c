@@ -6,6 +6,7 @@
 #include "decriptage.h"
 #include "reglejeu.h"
 #include "hasard.h"
+#include "robot.h"
 
 void wordle(char* mot){
 
@@ -15,7 +16,7 @@ void wordle(char* mot){
     int C = 0;
     do { int* COULEURS = decriptage(saisie(), mot);
         C = 0;
-        for (int i = 0; i<5; ++i){ C += COULEURS[i];}
+        for (int j = 0; j<5; ++j){ C += COULEURS[i];}
         i = i+1;
         free(COULEURS);}
     while (i<6 && C != 0);
