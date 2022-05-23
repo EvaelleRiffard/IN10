@@ -8,21 +8,37 @@
 #include "decriptage.h"
 
 
-char* robot(char* mot){
+char* robot(char* mot, char** Dico){
+    /*
     char** Dico = dico_i();
     char* essai = "tarie";
     int* COULEURS_M = decriptage(essai, mot);
     int C = 0;
+    for (int j = 0; j<5; j++){ C += COULEURS_M[j];}
     int i = 0;
 
-    do {Dico = maj_dico(mot, COULEURS_M, Dico);
+    while (C != 0 && i<10){
+        Dico = maj_dico(mot, COULEURS_M, Dico);
+        //Dico = Dico1;
+        size_t n = sizeof(Dico)/(5*sizeof(char));
+        for (int k= 0; k<n; k++){
+            printf("%d\n", k);
+        }
         essai = maj_essai(essai, Dico);
+        //essai = essai1;
+        printf("le mot essayé est\n");
         printf("%s\n", essai);
         COULEURS_M = decriptage(essai, mot);
         C = 0;
         for (int j = 0; j<5; j++){ C += COULEURS_M[j];}
-        i = i+1;}
-    while (C != 0 && i<10); 
+        i = i+1;
+        }
+     
 
-    return essai; 
+    //free(Dico)
+    return essai;
+    */
+    int* COULEURS_M = decriptage(essai, mot);
+    return maj_essai(essai,maj_dico(essai,COULEURS_M,Dico));
+
 }

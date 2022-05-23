@@ -1,8 +1,8 @@
 #include<stdio.h>
 
 int main(){
-    printf("hello world\n");
-    */*
+    printf("hello world\n");}
+    /*
     int* A[5];
     int* C[5];
     A[0] = 0;
@@ -23,4 +23,3 @@ int main(){
         }
     }
     */
-}
