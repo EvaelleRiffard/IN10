@@ -3,10 +3,10 @@
 #include <string.h>
 
 char* maj_essai(char* essai, char** Dico){
-    if (Dico[0]==essai){
-        return Dico[0];  //On fait en sorte de ne pas retester notre mot
+    if (Dico[0]==essai && Dico[1] != NULL){
+        return Dico[1];  //On fait en sorte de ne pas retester notre mot
     }
-    else{
-        return Dico[1];
+    else {
+        return Dico[0];
     }
 }

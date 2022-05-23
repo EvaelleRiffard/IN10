@@ -7,7 +7,6 @@
 
 #define VERT "\x1B[32m"
 #define BLEU "\x1B[36m"
-//#define JAUNE "\x1B[33m"
 #define ROUGE "\x1B[31m"
 #define RESET "\x1B[0m"
 
@@ -64,7 +63,6 @@ struct lettre* decriptage(char* essai, char* mot){
         printf("%s%c%s\n", l.c, l.l, RESET );
     }
     
-    //free(L);
     return L;
 
 }
